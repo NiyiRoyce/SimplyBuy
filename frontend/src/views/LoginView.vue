@@ -1,23 +1,23 @@
 <template>
   <div class="flex flex-col md:flex-row min-h-screen">
-    <!-- Left Side -->
+    <!-- Left Side (Desktop only) -->
     <div
-      class="w-full md:w-1/2 bg-purple-100 flex flex-col items-center justify-center p-10 rounded-b-[40px] md:rounded-b-none md:rounded-r-[40px]"
+      class="hidden md:flex md:w-1/2 bg-purple-100 flex-col items-center justify-center p-10 rounded-r-[40px]"
     >
       <!-- Logo -->
-      <div class="flex items-center space-x-2 mb-6 md:mb-8">
+      <div class="flex items-center space-x-2 mb-8">
         <img
-          src="https://i.imgur.com/W6KbBmO.png"
+          src="https://iili.io/KtXTG99.png"
           alt="Team Achieve Logo"
           class="w-12 h-12"
         />
         <h1 class="text-2xl font-semibold text-gray-700">Team Achieve</h1>
       </div>
 
-      <!-- People Image (Desktop only) -->
-      <div class="hidden md:block rounded-3xl overflow-hidden mb-6 md:mb-8 w-full max-w-md">
+      <!-- People Image -->
+      <div class="rounded-3xl overflow-hidden mb-8 w-full max-w-md">
         <img
-          src="https://i.imgur.com/GkZtcty.png"
+          src="https://iili.io/KtWUGPs.md.png" 
           alt="Team Achieve Illustration"
           class="object-cover w-full h-auto"
         />
@@ -25,8 +25,8 @@
 
       <!-- Caption -->
       <div class="text-center px-4">
-        <h2 class="text-xl font-bold text-purple-800 mb-1">Team Achieve</h2>
-        <p class="text-gray-600 font-medium text-sm md:text-base">
+        <h2 class="text-xl font-bold" style="color: #61227D;">Team Achieve</h2>
+        <p class="text-gray-600 font-medium text-base">
           Your perfect solution for funding your desires
         </p>
       </div>
@@ -36,7 +36,17 @@
     <div
       class="w-full md:w-1/2 flex flex-col justify-center items-center px-6 md:px-16 py-10 md:py-0"
     >
-      <h2 class="text-3xl font-bold text-purple-800 mb-2 text-center md:text-left">
+      <!-- Mobile Logo (Mobile only) -->
+      <div class="flex md:hidden items-center justify-center mb-8">
+        <img
+          src="https://iili.io/KtXTG99.png"
+          alt="Team Achieve Logo"
+          class="w-16 h-16"
+        />
+      </div>
+
+      <!-- Welcome Back -->
+      <h2 class="text-3xl font-bold mb-2 text-center md:text-left" style="color: #61227D;">
         Welcome Back
       </h2>
       <p class="text-gray-600 mb-8 text-center md:text-left">
@@ -52,7 +62,8 @@
           <input
             type="email"
             placeholder="Enter your email"
-            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2"
+            style="--tw-ring-color: #61227D;"
           />
         </div>
 
@@ -65,7 +76,8 @@
             <input
               :type="showPassword ? 'text' : 'password'"
               placeholder="Enter your password"
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2"
+              style="--tw-ring-color: #61227D;"
             />
             <button
               type="button"
@@ -76,11 +88,9 @@
             </button>
           </div>
           <div class="text-right mt-1">
-            <a
-              href="#"
-              class="text-purple-700 text-sm font-medium hover:underline"
-              >Forgot Password?</a
-            >
+            <a href="#" class="text-sm font-medium hover:underline" style="color: #61227D;">
+              Forgot Password?
+            </a>
           </div>
         </div>
 
@@ -92,22 +102,21 @@
           </label>
         </div>
 
-        <!-- Submit Button -->
+        <!-- Sign In Button -->
         <button
           type="submit"
-          class="w-full bg-purple-700 text-white py-2 rounded-md font-semibold hover:bg-purple-800 transition"
+          class="w-full text-white py-2 rounded-md font-semibold transition"
+          style="background-color: #61227D;"
         >
           Sign in
         </button>
 
         <!-- Sign Up -->
         <p class="text-center mt-4 text-gray-700 text-sm">
-          Don’t have an account?
-          <a
-            href="#"
-            class="text-purple-700 font-semibold hover:underline"
-            >Sign up</a
-          >
+          Don't have an account?
+          <a href="#" class="font-semibold hover:underline" style="color: #61227D;">
+            Sign up
+          </a>
         </p>
       </form>
     </div>
